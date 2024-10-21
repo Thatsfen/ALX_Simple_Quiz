@@ -4,8 +4,11 @@ function checkAnswer() {
     const userAnswer = selectedOption ? selectedOption.value : null;
     const feedbackElement = document.getElementById("feedback");
 
-    feedbackElement.textContent = 
-        userAnswer === correctAnswer ? "Correct! Well done." : "That's incorrect. Try again!";
+    if (userAnswer === correctAnswer) {
+        feedbackElement.textContent = "Correct! Well done.";
+    } else {
+        feedbackElement.textContent = "That's incorrect. Try again!";
+    }
 }
 
 document.getElementById("submit-answer").addEventListener("click", checkAnswer);
