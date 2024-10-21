@@ -1,7 +1,4 @@
 function checkAnswer() {
-    // Function body
-}
-function checkAnswer() {
     const correctAnswer = "4";
     const selectedOption = document.querySelector('input[name="quiz"]:checked');
     const userAnswer = selectedOption ? selectedOption.value : null;
